@@ -1,0 +1,54 @@
+package JavaDailyTips;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Random;
+
+public class TipsGenerator {
+
+	public static void main(String[] args) throws Exception {
+		
+		File file = new File("tips.txt");
+		BufferedReader br = null;
+		
+		br = new BufferedReader(new FileReader(file));
+		
+		// GET ALL LINES
+		String line = br.readLine();
+		
+		// CREATE ARRAY
+		ArrayList<String> allLines = new ArrayList<String>();
+		
+		//WHILE LINE EXIST
+		while (line != null) {
+			//Add line to array
+			allLines.add(line);
+			
+			// IDK
+			line = br.readLine();
+		}
+		br.close();
+		
+		//CREATE RANDOM FUNCTION
+		Random random = new Random(); 
+		
+		System.out.println("Tip of the day: ");
+		System.out.println("");
+		
+		//for(int i=0; i < allLines.size(); i++){
+			// GET RANDOM ID FROM ARRAY
+			int id = random.nextInt(allLines.size());
+			
+			//GET LINE TEXT BY ID
+			String lineText = allLines.get(id);
+			
+			String result = lineText;
+			
+			//PRINT
+            System.out.println(result);
+        //}
+	}
+
+}
