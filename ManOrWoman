@@ -1,0 +1,29 @@
+package lv.eleonora;
+
+public class ManOrWoman {
+		
+		
+    
+	
+        // overridden method
+        public void display(){
+          System.out.println("write your gender");
+        }
+      
+//      class Man extends Human {
+//        // overriding method
+//        @Override
+//        public void display(){
+//          System.out.println("I am male");
+//        }
+//        public void printMessage(){
+//          display();
+//        }
+//      }
+//      class Main {
+//        public void main(String[] args) {
+//          Man man1 = new Man();
+//          man1.printMessage();
+////        
+//      }
+   }
